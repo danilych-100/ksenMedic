@@ -8,7 +8,7 @@
       <div>
           <h4>{{doctor.name}}</h4>
           <h5 style="text-decoration: underline"> {{doctor.position}}</h5>
-          <button (click)="onChoseDoctor(doctor)" mat-raised-button color="primary" style="margin-top: 170px">
+          <button *ngIf="enableActions" (click)="onChoseDoctor(doctor)" mat-raised-button color="primary" style="margin-top: 170px">
               Записаться
           </button>
       </div>
