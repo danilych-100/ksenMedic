@@ -16,13 +16,18 @@ import { MedicAppRoutingModule } from './app-routing.module';
 import { MedicHomeModule } from './home/home.module';
 import { MedicAccountModule } from './account/account.module';
 import { MedicEntityModule } from './entities/entity.module';
+import { AppComponent } from './app.component';
+import { ClientModule } from './client/client.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
+import {NgxPermissionsModule, NgxPermissionsService} from "ngx-permissions";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         MedicAppRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-' }),
         MedicSharedModule,
@@ -30,9 +35,11 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         MedicHomeModule,
         MedicAccountModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
-        MedicEntityModule
+        MedicEntityModule,
+        ClientModule,
+        NgxPermissionsModule.forRoot(),
     ],
-    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
+    declarations: [NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent, AppComponent],
     providers: [
         {
             provide: HTTP_INTERCEPTORS,
@@ -55,7 +62,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
             multi: true
         }
     ],
-    bootstrap: [JhiMainComponent]
+    bootstrap: [AppComponent]
 })
 export class MedicAppModule {
     constructor(private dpConfig: NgbDatepickerConfig) {

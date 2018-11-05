@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <mat-card *ngFor="let doctor of doctors | async" class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{doctor.name}}</mat-card-title>
+      <mat-card-subtitle> {{doctor.position}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{doctor.image}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>{{doctor.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button *ngIf="enableActions" (click)="onChoseDoctor(doctor)" mat-raised-button color="primary">
+        Записаться
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

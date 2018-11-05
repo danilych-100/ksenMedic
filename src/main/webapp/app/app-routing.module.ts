@@ -1,9 +1,15 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { errorRoute, navbarRoute } from './layouts';
-import { DEBUG_INFO_ENABLED } from 'app/app.constants';
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
+import {errorRoute, navbarRoute} from './layouts';
+import {DEBUG_INFO_ENABLED} from 'app/app.constants';
 
-const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
+const LAYOUT_ROUTES = [
+    {
+        path: '',
+        redirectTo: '/main',
+        pathMatch: 'full'
+    }
+];
 
 @NgModule({
     imports: [
@@ -15,9 +21,10 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
                     loadChildren: './admin/admin.module#MedicAdminModule'
                 }
             ],
-            { useHash: true, enableTracing: DEBUG_INFO_ENABLED }
+            {useHash: true, enableTracing: DEBUG_INFO_ENABLED}
         )
     ],
     exports: [RouterModule]
 })
-export class MedicAppRoutingModule {}
+export class MedicAppRoutingModule {
+}
