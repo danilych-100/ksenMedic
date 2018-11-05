@@ -5,6 +5,7 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from 'app/shared';
 import { LoginModalService } from 'app/core';
 import { Register } from './register.service';
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'jhi-register',
@@ -24,6 +25,7 @@ export class RegisterComponent implements OnInit, AfterViewInit {
         private loginModalService: LoginModalService,
         private registerService: Register,
         private elementRef: ElementRef,
+        private router: Router,
         private renderer: Renderer
     ) {}
 
@@ -48,6 +50,10 @@ export class RegisterComponent implements OnInit, AfterViewInit {
             this.registerService.save(this.registerAccount).subscribe(
                 () => {
                     this.success = true;
+                    setTimeout(() => {
+                        this.router.navigate(['/main']);
+                    }, 2000)
+
                 },
                 response => this.processError(response)
             );

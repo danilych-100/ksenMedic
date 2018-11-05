@@ -16,52 +16,23 @@ export class DoctorsService {
         id: 100,
         name: 'Анна Сергеевна Ляпика',
         position: 'Терапевт',
-        description: 'he Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.',
+        description: 'Заболевания почек и мочевыводительной системы, желудочно-кишечного тракта, сердечно-сосудистой и бронхо-легочной систем, гериатрия, восстановительное лечение, профилактическое консультирование',
         image: 'https://myblue.bluecrossma.com/sites/g/files/csphws1086/files/inline-images/Doctor%20Image%20Desktop.png',
       }),
-      new Doctor({
-        id: 100,
-        name: 'Анна Сергеевна Ляпика',
-        position: 'Терапевт',
-        image: 'https://myblue.bluecrossma.com/sites/g/files/csphws1086/files/inline-images/Doctor%20Image%20Desktop.png',
-      }),
-      new Doctor({
-        id: 100,
-        name: 'Анна Сергеевна Ляпика',
-        position: 'Терапевт',
-        description: 'he he Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.',
-        image: 'https://www.expatincroatia.com/wp-content/uploads/2013/09/how-to-find-a-doctor-in-croatia.jpg',
-      }),
-      new Doctor({
-        id: 100,
-        name: 'Анна Сергеевна Ляпика',
-        position: 'Терапевт',
-      }),
-      new Doctor({
-        id: 100,
-        name: 'Анна Сергеевна Ляпика',
-        position: 'Терапевт',
-      }),
-      new Doctor({
-        id: 100,
-        name: 'Анна Сергеевна Ляпика',
-        position: 'Терапевт',
-      }),
-      new Doctor({
-        id: 100,
-        name: 'Анна Сергеевна Ляпика',
-        position: 'Терапевт',
-      }),
-      new Doctor({
-        id: 100,
-        name: 'Анна Сергеевна Ляпика',
-        position: 'Терапевт',
-      }),
-      new Doctor({
-        id: 100,
-        name: 'Анна Сергеевна Ляпика',
-        position: 'Терапевт',
-      }),
+        new Doctor({
+            id: 200,
+            name: 'Игорь василич вязменский',
+            position: 'Проктолог',
+            description: 'Лечение заболеваний, которые могут быть излечены в амбулаторных условиях; ведением беременности у женщины, патронажами к новорожденному; ведение детей, измерение их антропомотрических показателей',
+            image: 'https://myblue.bluecrossma.com/sites/g/files/csphws1086/files/inline-images/Doctor%20Image%20Desktop.png',
+        }),
+        new Doctor({
+            id: 300,
+            name: 'Валерий Семенович Штольц',
+            position: 'Дантист',
+            description: 'Проведение объективного исследования больного по всем органам и системам, выявление общих и специфических признаков заболевания; оценка тяжести состояния больного; обоснование и формулировка  клинического диагноза, проведение дифференциальной диагностики, определение плана и тактики ведения больного; назначение медикаментозного и других методов лечения; оценка трудоспособности больного',
+            image: 'https://myblue.bluecrossma.com/sites/g/files/csphws1086/files/inline-images/Doctor%20Image%20Desktop.png',
+        })
     ];
     return Observable.of(doctors);
   }

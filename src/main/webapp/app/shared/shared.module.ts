@@ -10,7 +10,7 @@ import {
     MatPaginatorModule, MatProgressBarModule,
     MatProgressSpinnerModule, MatSelectModule, MatSidenavModule,
     MatSortModule,
-    MatTableModule, MatTabsModule, MatToolbarModule,
+    MatTableModule, MatTabsModule, MatToolbarModule,MatDividerModule
 } from '@angular/material';
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { NgbDateMomentAdapter } from './util/datepicker-adapter';
@@ -34,6 +34,7 @@ import { MedicSharedLibsModule, MedicSharedCommonModule, JhiLoginModalComponent,
         MatTabsModule,
         MatSidenavModule,
         MatProgressBarModule,
+        MatDividerModule
     ],
     declarations: [JhiLoginModalComponent, HasAnyAuthorityDirective],
     providers: [{ provide: NgbDateAdapter, useClass: NgbDateMomentAdapter }],

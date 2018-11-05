@@ -15,6 +15,14 @@ mat-card:not(:last-of-type) {
 }
 .example-card {
   width: 300px;
+    display: grid;
+    grid-template-columns: 100% 100% 100%;
+    grid-column-gap: 25px;
+    grid-row-gap: 15px;
+}
+
+.example-card > div {
+    min-width: 300px;
 }
 
 .example-header-image {
